@@ -1,0 +1,109 @@
+<!-- REFERENCE: https://app.eduportal.com/share/0bf2f7fc-3d9a-11e8-b33e-00155d645900 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Online Application</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Online Application</h1>
+    <p id="description">PLEASE NOTE: It is important that you complete all parts of the application. If your application is incomplete or does not clearly show the experience and/or training required, your application may not be accepted. If you have no information to enter in a section, please write N/A.</p>
+    
+    <!-- Form -->
+    <form id="survey-form">
+      <!-- Name -->
+      <label id="name-label">Name (First, Middle, Last): 
+        <input id="name" type="text" placeholder="John R. Doe" required/>
+      </label>
+      <!-- SSN -->
+      <label id="name-label">Social Security Number: 
+        <input id="ssn" type="text" placeholder="123-45-6789" required/>
+      </label>
+      <!-- Address -->
+      <label id="name-label">Mailing Address: 
+        <input id="address" type="text" placeholder="123 Strawberry Fields" required/>
+      </label>
+      <!-- City, State, Zip -->
+      <label id="name-label">City, State, and Zip Code: 
+        <input id="address2" type="text" placeholder="New Francisco, Old York, 11111" required/>
+      </label>
+      <!-- Telephone -->
+      <label id="name-label">Telephone: 
+        <input id="phone" type="text" placeholder="123-456-7890" required/>
+      </label>
+      <!-- Email -->
+      <label id="email-label">Email: 
+        <input id="email" type="email" placeholder="jdoe@umail.com" required/>
+      </label>
+      <!-- Age -->
+      <label id="number-label">Age: 
+        <input id="number" type="number" min="18" max="65" placeholder="24" required/>
+      </label>
+      <hr>
+      <!-- Desired Job Type -->
+      <label>Job Type:
+        <select id="dropdown">
+          <option>Select One</option>
+          <option value="volunteer">Volunteer</option>
+          <option value="intern">Internship</option>
+          <option value="partTime">Part-Time</option>
+          <option value="fullTime">Full-Time</option>
+        </select>
+      </label>
+      <!-- Relocation? -->
+      <label>Are you willing to relocate? 
+        <input type="radio" name="relocate" value="yes" class="inline"/> Yes
+        <input type="radio" name="relocate" value="no" class="inline"/> No
+      </label>
+      <!-- Relocation 2 -->
+      <label>If so, where?:
+        <select id="dropdown">
+          <option>Select One</option>
+          <option value="cca">Cupertino, California</option>
+          <option value="lgca">Los Gatos, California</option>
+          <option value="mpca">Menlo Park, California</option>
+          <option value="mvca">Mountain View, California</option>
+          <option value="sfca">San Francisco, California</option>
+          <option value="nyc">New York City, New York</option>
+          <option value="atx">Austin, Texas</option>
+          <option value="rwa">Redmond, Washington</option>
+          <option value="swa">Seattle, Washington</option>
+        </select>
+      </label>
+      <hr>
+      <!-- Languages -->
+      <label>
+        <p id="proficient">What languages are you proficient in?</p>
+        <input type="checkbox" value="htmlcss" class="inline"/> HTML & CSS
+        <br>
+        <input type="checkbox" value="js" class="inline"/> JavaScript
+        <br>
+        <input type="checkbox" value="py" class="inline"/> Python 
+        <br>
+        <input type="checkbox" value="java" class="inline"/> Java
+        <br>
+        <input type="checkbox" value="cpp" class="inline"/> C++
+        <br>
+        <input type="checkbox" value="cs" class="inline"/> C#
+        <br>
+        <input type="checkbox" value="c" class="inline"/> C
+      </label>
+      <hr>
+      <!-- Headshot -->
+      <label>Upload a professional headshot: <input type="file" name="file" accept="image/*"/>
+      </label>
+      <!-- Resumé -->
+      <label>Upload your resumé: <input type="file" name="file" accept="application/pdf, .doc, .docx, application/msword" required/>
+      </label>
+      <!-- Cover Letter -->
+      <label>Write you cover letter here:
+        <!-- PLACEHOLDER TEXT: https://www.youthcentral.vic.gov.au/jobs-and-careers/applying-for-a-job/what-is-a-cover-letter/how-to-write-a-cover-letter -->
+        <textarea rows="10" cols="30" placeholder="Keep it short. A cover letter is meant to be a summary of your resume, so don’t write more than three paragraphs (600 words)." required></textarea>
+      </label>
+      <!-- Submit -->
+      <!--<button id="submit"  type="submit" value="Submit">Submit
+      </button>-->
+      <input type="submit" value="Submit" class="submit"/>
+    </form>
+  </body>
+</html>
