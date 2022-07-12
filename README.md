@@ -75,3 +75,19 @@ Certification Project
 
 ----
 ## Course 3:
+
+### balanceSheet
+Learn More About CSS Pseudo Selectors by Building A Balance Sheet
+- You can use CSS pseudo selectors to change specific HTML elements.
+
+  - In this course, you'll build a balance sheet using pseudo selectors. You'll learn how to change the style of an element when you hover over it with your mouse, and trigger other events on your webpage.
+
+### picassoPainting
+Learn Intermediate CSS by Building a Picasso Painting
+- In this course, you'll learn how to use some intermediate CSS techniques by coding your own Picasso painting webpage. You'll learn about SVG icons, CSS positioning, and review other CSS skills you've learned.
+
+### buildingPiano
+Learn Responsive Web Design by Building a Piano
+- Responsive Design tells your webpage how it should look on different-sized screens.
+
+  - In this course, you'll use CSS and Responsive Design to code a piano. You'll also learn more about media queries and pseudo selectors.
