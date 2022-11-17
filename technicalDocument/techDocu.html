@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>HTML Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#What_you_should_already_know">What you should already know</a></li>
+        <li><a class="nav-link" href="#Anatomy_of_an_HTML_element">Anatomy of an HTML element</a></li>
+        <li><a class="nav-link" href="#Nesting_elements">Nesting elements</a></li>
+        <li><a class="nav-link" href="#Block_versus_inline_elements">Block versus inline elements</a></li>
+        <li><a class="nav-link" href="#Void_elements">Void elements</a></li>
+        <li><a class="nav-link" href="#Attributes">Attributes</a></li>
+        <li><a class="nav-link" href="#Boolean_attributes">Boolean attributes</a>
+        </li>
+        <li><a class="nav-link" href="#Omitting_quotes_around_attribute_values">Omitting quotes around attribute values</a></li>
+        <li><a class="nav-link" href="#Single_or_double_quotes">Single or double quotes</a></li>
+        <li><a class="nav-link" href="#Anatomy_of_an_HTML_document">Anatomy of an HTML document</a></li>
+        <li><a class="nav-link" href="#Whitespace_in_HTML">Whitespace in HTML</a></li>
+        <li><a class="nav-link" href="#Entity_references">Entity references</a></li>
+        <li><a class="nav-link" href="#HTML_comments">HTML comments</a></li>
+        <li><a class="nav-link" href="#Summary">Summary</a></li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>
+            HTML (<b>H</b>yper<b>T</b>ext <b>M</b>arkup <b>L</b>anguage) is the code that is used to structure a web page and its content. For example, content could be structured within a set of paragraphs, a list of bulleted points, or using images and data tables. As the title suggests, this article will give you a basic understanding of HTML and its functions.
+          </p>
+          <p>
+            HTML is a markup language that defines the structure of your content. HTML consists of a series of <a href="https://developer.mozilla.org/en-US/docs/Glossary/Element">elements</a>, which you use to enclose, or wrap, different parts of the content to make it appear a certain way, or act a certain way. The enclosing <a href="https://developer.mozilla.org/en-US/docs/Glossary/Tag">tags</a> can make a word or image hyperlink to somewhere else, can italicize words, can make the font bigger or smaller, and so on. For example, take the following line of content:
+          </p>
+          <code>My cat is very grumpy</code>
+          <p>If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in paragraph tags:</p>
+          <code>< p>My cat is very grumpy< /p></code>
+           
+        </article>
+      </section>
+      <section class="main-section" id="What_you_should_already_know">
+        <header>What you should already know</header>
+        <article>
+          <p>Before starting this module, you don't need any previous HTML knowledge, but you should have at least basic familiarity with using computers and using the web passively (i.e., just looking at it and consuming content). You should have a basic work environment set up (as detailed in <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Installing basic software</a>), and understand how to create and manage files (as detailed in <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a>). Both are parts of our <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web">Getting started with the web</a> complete beginner's module.</p>
+          <p><b><u>Note:</u></b> Tags in HTML are not case-sensitive. This means they can be written in uppercase or lowercase. For example, a <i>< title></i> tag could be written as <b>< title></b>, <b>< TITLE></b>, <b>< Title></b>, <b>< TiTlE></b>, etc., and it will work. However, it is best practice to write all tags in lowercase for consistency and readability.</p>
+           
+        </article>
+      </section>
+      <section class="main-section" id="Anatomy_of_an_HTML_element">
+        <header>Anatomy of an HTML element</header>
+        <article>
+          <p>
+            Let's further explore our paragraph element from the previous section:
+          </p>
+          <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png" width="75%"/>
+          <p>
+            The anatomy of our element is:
+          </p>
+          <ul>
+            <li><b>The opening tag:</b> This consists of the name of the element (in this example, p for paragraph), wrapped in opening and closing angle brackets. This opening tag marks where the element begins or starts to take effect. In this example, it precedes the start of the paragraph text.</li>
+            <li><b>The content:</b> This is the content of the element. In this example, it is the paragraph text.</li>
+            <li><b>The closing tag:</b> This is the same as the opening tag, except that it includes a forward slash before the element name. This marks where the element ends. Failing to include a closing tag is a common beginner error that can produce peculiar results.</li>
+          </ul>
+          <p>The element is the opening tag, followed by content, followed by the closing tag.</p>
+           
+        </article>
+      </section>
+      <section class="main-section" id="Nesting_elements">
+        <header>Nesting elements</header>
+        <article>
+          <p>Elements can be placed within other elements. This is called nesting. If we wanted to state that our cat is <i>very</i> grumpy, we could wrap the word very in a <b>< strong></b> element, which means that the word is to have strong(er) text formatting:</p>
+          <code>< p>My cat is < strong>very< /strong> grumpy.< /p>
+          </code>
+          <p>There is a right and wrong way to do nesting. In the example above, we opened the <b>p</b> element first, then opened the <b>strong</b> element. For proper nesting, we should close the <b>strong</b> element first, before closing the <b>p</b>.</p>
+          <p>The following is an example of the wrong way to do nesting:</p>
+          <code>< p>My cat is < strong>very grumpy.< /p>< /strong></code>
+          <p>The <b>tags have to open and close in a way that they are inside or outside one another</b>. With the kind of overlap in the example above, the browser has to guess at your intent. This kind of guessing can result in unexpected results.</p>
+         
+        </article>
+      </section>
+      <section class="main-section" id="Block_versus_inline_elements">
+        <header>Block versus inline elements</header>
+        <article>
+        <p>
+          There are two important categories of elements to know in HTML: block-level elements and inline elements.
+        </p>
+        <ul>
+          <li>
+            Block-level elements form a visible block on a page. A block-level element appears on a new line following the content that precedes it. Any content that follows a block-level element also appears on a new line. Block-level elements are usually structural elements on the page. For example, a block-level element might represent headings, paragraphs, lists, navigation menus, or footers. A block-level element wouldn't be nested inside an inline element, but it might be nested inside another block-level element.
+          </li>
+          <li>
+          Inline elements are contained within block-level elements, and surround only small parts of the document's content (not entire paragraphs or groupings of content). An inline element will not cause a new line to appear in the document. It is typically used with text, for example an <b>< a></b> element creates a hyperlink, and elements such as <b>< em></b> or <b>< strong></b> create emphasis.
+          </li>
+        </ul>
+        <p>
+          Consider the following example:
+        </p>
+        <code>< em>first< /em>< em>second< /em>< em>third< /em>
+        < p>fourth< /p>
+        < p>fifth< /p>
+        < p>sixth< /p></code>
+        <p><b>< em></b> is an inline element. As you see below, the first three elements sit on the same line, with no space in between. On the other hand, <b>< p></b> is a block-level element. Each p element appears on a new line, with space above and below. (The spacing is due to default CSS styling that the browser applies to paragraphs.)</p>
+        <code><em>first</em><em>second</em><em>third</em><p>fourth</p><p>fifth</p><p>sixth</p></code>
+         
+        </article>
+      </section>
+      <section class="main-section" id="Void_elements">
+        <header>Void elements</header>
+        <article>
+          Not all elements follow the pattern of an opening tag, content, and a closing tag. Some elements consist of a single tag, which is typically used to insert/embed something in the document. Such elements are called <a href="https://developer.mozilla.org/en-US/docs/Glossary/Void_element">void elements</a>. For example, the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">< img></a> element embeds an image file onto a page:
+          <code>< img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" alt="Firefox icon" />
+</code> 
+          <p>
+            This would output the following:
+          </p>
+          <img
+  src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" alt="Firefox icon" />
+          <p>
+            <b>Note:</b> In HTML, there is no requirement to add a <b>/</b> at the end of a void element's tag, for example: <b>< img src="images/cat.jpg" alt="cat" /></b>. However, it is also a valid syntax, and you may do this when you want your HTML to be valid XML.
+          </p>
+           
+        </article>
+      </section>
+      <section class="main-section" id="Attributes">
+        <header>Attributes</header>
+        <article>
+          <p>
+            Elements can also have attributes. Attributes look like this:
+          </p>
+          <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-attribute-small.png" width=75%/>
+          <p>
+            Attributes contain extra information about the element that won't appear in the content. In this example, the <b>class</b> attribute is an identifying name used to target the element with style information.
+          </p>
+          <p>An attribute should have:</p>
+          <ul>
+            <li>A space between it and the element name. (For an element with more than one attribute, the attributes should be separated by spaces too.)</li>
+            <li>The attribute name, followed by an equal sign.</li>
+            <li>An attribute value, wrapped with opening and closing quote marks.</li>
+          </ul>
+           
+        </article>
+      </section>
+      <section class="main-section" id="Boolean_attributes">
+        <header>Boolean attributes</header>
+        <article>
+          <p>
+            Sometimes you will see attributes written without values. This is entirely acceptable. These are called Boolean attributes. Boolean attributes can only have one value, which is generally the same as the attribute name. For example, consider the <b>disabled</b> attribute, which you can assign to form input elements. (You use this to disable the form input elements so the user can't make entries. The disabled elements typically have a grayed-out appearance.) For example:
+          </p>
+          <code>< input type="text" disabled="disabled" />
+</code>
+          <p>
+            As shorthand, it is acceptable to write this as follows:
+          </p>
+          <code>< !-- using the disabled attribute prevents the end user from entering text into the input box -->
+< input type="text" disabled />
+< !-- text input is allowed, as it doesn't contain the disabled attribute -->
+< input type="text" /></code>
+          <p>For reference, the example above also includes a non-disabled form input element. The HTML from the example above produces this result:</p>
+          <code><input type="text" disabled /><input type="text" /></code>
+           
+        </article>
+      </section>
+      <section class="main-section" id="Omitting_quotes_around_attribute_values">
+        <header>Omitting quotes around attribute values</header>
+        <article>
+          <p>
+            If you look at code for a lot of other sites, you might come across a number of strange markup styles, including attribute values without quotes. This is permitted in certain circumstances, but it can also break your markup in other circumstances. For example, if we revisit our link example from earlier, we could write a basic version with only the <b>href</b> attribute, like this:
+          </p>
+          <code>< a href=https://www.mozilla.org/>favorite website< /a></code>
+          <p>
+            However, as soon as we add the title attribute in this way, there are problems:
+          </p>
+          <code>< a href=https://www.mozilla.org/ title=The Mozilla homepage>favorite website< /a></code>
+          <p>
+            As written above, the browser misinterprets the markup, mistaking the <b>title</b> attribute for three attributes: a title attribute with the value <b>The</b>, and two Boolean attributes, <b>Mozilla</b> and <b>homepage</b>. Obviously, this is not intended! It will cause errors or unexpected behavior, as you can see in the live example below. Try hovering over the link to view the title text!
+          </p>
+          <code><a href=https://www.mozilla.org/ title=The Mozilla homepage>favorite website</a></code>
+          <p>
+            Always include the attribute quotes. It avoids such problems, and results in more readable code.
+          </p>
+           
+        </article>
+      </section>
+      <section class="main-section" id="Single_or_double_quotes">
+        <header>Single or double quotes</header>
+        <article>
+          <p>In this article you will also notice that the attributes are wrapped in double quotes. However, you might see single quotes in some HTML code. This is a matter of style. You can feel free to choose which one you prefer. Both of these lines are equivalent:
+</p>
+         <code>< a href='https://www.example.com'>A link to my example.< /a>
+         < a href="https://www.example.com">A link to my example.< /a></code>
+         <p>Make sure you don't mix single quotes and double quotes. This example (below) shows a kind of mixing quotes that will go wrong:</p>
+         <code>< a href="https://www.example.com'>A link to my example.< /a></code>
+         <p>However, if you use one type of quote, you can include the other type of quote inside your attribute values:</p>
+         <code>< a href="https://www.example.com" title="Isn't this fun?">A link to my example.< /a></code>
+         <p>To use quote marks inside other quote marks of the same type (single quote or double quote), use <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#entity_references_including_special_characters_in_html">HTML entities</a>. For example, this will break:</p>
+         <code>< a href='https://www.example.com' title='Isn't this fun?'>A link to my example.< /a></code>
+         <p>Instead, you need to do this:</p>
+         <code>< a href='https://www.example.com' title='Isn&apos;t this fun?'>A link to my example.< /a></code>
+          
+        </article>
+      </section>
+      <section class="main-section" id="Anatomy_of_an_HTML_document">
+        <header>Anatomy of an HTML document</header>
+        <article>
+          <p>Individual HTML elements aren't very useful on their own. Next, let's examine how individual elements combine to form an entire HTML page:</p>
+          <code>< !DOCTYPE html>
+          < html lang="en-US">
+          &nbsp< head>
+          &nbsp&nbsp< meta charset="utf-8" />
+          &nbsp&nbsp< title>My test page< /title>
+          &nbsp< /head>
+          &nbsp< body>
+          &nbsp&nbsp< p>This is my page< /p>
+          &nbsp< /body>
+          < /html></code>
+          <p>Here we have:</p>
+          <ol>
+            <li><b>< !DOCTYPE html></b>: The doctype. When HTML was young (1991-1992), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML. Doctypes used to look something like this:
+            <code>< !DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"></code>
+            More recently, the doctype is a historical artifact that needs to be included for everything else to work right. <b>< !DOCTYPE html></b> is the shortest string of characters that counts as a valid doctype. That is all you need to know!</li>
+            <li><b>< html>< /html></b>: The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">< html></a> element. This element wraps all the content on the page. It is sometimes known as the root element.</li>
+            <li><b>< head>< /head></b>: The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head">< head></a> element. This element acts as a container for everything you want to include on the HTML page, that isn't the content the page will show to viewers. This includes keywords and a page description that would appear in search results, CSS to style content, character set declarations, and more. You will learn more about this in the next article of the series.</li>
+            <li><b>< meta charset="utf-8"></b>: The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta">< meta></a> element. This element represents metadata that cannot be represented by other HTML meta-related elements, like <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base">< base></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">< link></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">< script></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style">< style></a> or <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title">< title>. The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#attr-charset">charset</a> attributes sets the character set for your document to UTF-8, which includes most characters from the vast majority of human written languages. With this setting, the page can now handle any textual content it might contain. There is no reason not to set this, and it can help avoid some problems later.</li>
+            <li><b>< title>< /title></b>: The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title">< title></a> element. This sets the title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe the page when it is bookmarked.</li>
+            <li><b>< body>< /body></b>: The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">< body></a> element. This contains all the content that displays on the page, including text, images, videos, games, playable audio tracks, or whatever else.</li>
+          </ol>
+           
+        </article>
+      </section>
+      <section class="main-section" id="Whitespace_in_HTML">
+        <header>Whitespace in HTML</header>
+        <article>
+          <p>In the examples above, you may have noticed that a lot of whitespace is included in the code. This is optional. These two code snippets are equivalent:</p>
+          <code>< p>Dogs are silly.< /p>
+          < p>Dogs &nbsp&nbsp&nbsp&nbsp are &nbsp&nbsp&nbsp&nbsp silly.< /p></code> 
+          <p>
+            No matter how much whitespace you use inside HTML element content (which can include one or more space character, but also line breaks), the HTML parser reduces each sequence of whitespace to a single space when rendering the code. So why use so much whitespace? The answer is readability.
+          </p>
+          <p>
+            It can be easier to understand what is going on in your code if you have it nicely formatted. In our HTML we've got each nested element indented by two spaces more than the one it is sitting inside. It is up to you to choose the style of formatting (how many spaces for each level of indentation, for example), but you should consider formatting it.
+          </p>
+           
+        </article>
+      </section>
+      <section class="main-section" id="Entity_references">
+        <header>Entity references</header>
+        <h2>Including special characters in HTML</h2>
+        <article>
+          <p>In HTML, the characters <b> < </b>, <b> > </b>, <b>"</b> ,<b> ' </b> and <b>&</b> are special characters. They are parts of the HTML syntax itself. So how do you include one of these special characters in your text? For example, if you want to use an ampersand or less-than sign, and not have it interpreted as code.</p>
+          <p>
+            You do this with character references. These are special codes that represent characters, to be used in these exact circumstances. Each character reference starts with an ampersand (&), and ends with a semicolon (;).
+          </p>
+          <table>
+            <tr>
+              <th>Literal character</th>
+              <th>Character reference equivalent</th> 
+            </tr>
+            <tr>
+              <td><</td>
+              <td><code>& lt;</code></td> 
+            </tr>
+            <tr>
+              <td>></td>
+              <td><code>& gt;</code></td> 
+            </tr>
+            <tr>
+              <td>"</td>
+              <td><code>& quot;</code></td> 
+            </tr>
+            <tr>
+              <td>'</td>
+              <td><code>& apos;</code></td> 
+            </tr>
+            <tr>
+              <td>&</td>
+              <td><code>& amp;</code></td> 
+            </tr>
+          </table>
+          <p>
+            The character reference equivalent could be easily remembered because the text it uses can be seen as less than for '&lt;', quotation for ' &quot; ' and similarly for others. To find more about entity reference, see <a href="https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references">List of XML and HTML character entity references</a> (Wikipedia).
+          </p>
+          In the example below, there are two paragraphs:
+          <code>< p>In HTML, you define a paragraph using the < p> element.< /p>
+< p>In HTML, you define a paragraph using the & lt;p& gt; element.< /p></code>
+          <p>In the live output below, you can see that the first paragraph has gone wrong. The browser interprets the second instance of <b>< p></b> as starting a new paragraph. The second paragraph looks fine because it has angle brackets with character references.</p>
+          <code><p>In HTML, you define a paragraph using the <p> element.</p>
+          <p>In HTML, you define a paragraph using the &lt;p&gt; element.</p></code>
+          <p><b>Note:</b> You don't need to use entity references for any other symbols, as modern browsers will handle the actual symbols just fine as long as your HTML's <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_documents_character_encoding">character encoding is set to UTF-8</a>.</p>
+           
+        </article>
+      </section>
+      <section class="main-section" id="HTML_comments">
+        <header>HTML comments</header>
+        <article>
+          <p>HTML has a mechanism to write comments in the code. Browsers ignore comments, effectively making comments invisible to the user. The purpose of comments is to allow you to include notes in the code to explain your logic or coding. This is very useful if you return to a code base after being away for long enough that you don't completely remember it. Likewise, comments are invaluable as different people are making changes and updates.</p>
+          <p>To write an HTML comment, wrap it in the special markers <b>< !--</b> and <b>--></b>. For example:</p>
+          <code>< p>I'm not inside a comment< /p>
+            < !-- < p>I am!< /p> --></code>
+          <p>As you can see below, only the first paragraph is displayed in the live output.</p>
+          <code><p>I'm not inside a comment</p>
+          <!-- <p>I am!</p> --></code>
+           
+        </article>
+        </section>
+      <section class="main-section" id="Summary">
+        <header>Summary</header>
+        <article>
+          <p>You made it to the end of the article! We hope you enjoyed your tour of the basics of HTML.</p>
+          <p>At this point, you should understand what HTML looks like, and how it works at a basic level. You should also be able to write a few elements and attributes. The subsequent articles of this module go further on some of the topics introduced here, as well as presenting other concepts of the language.</p>
+          <p><b>Note:</b> As you start to learn more about HTML, consider learning the basics of Cascading Style Sheets, or <ahref="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS</a>. CSS is the language used to style web pages: for example, changing fonts or colors, or altering the page layout. HTML and CSS work well together, as you will soon discover.</p>
+           
+        </article>
+        </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <ul>
+            <li>
+              All the documentation in this page is taken from
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+                target="_blank"
+                >MDN</a
+              >
+            </li>
+          </ul>
+           
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
