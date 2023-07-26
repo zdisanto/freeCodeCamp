@@ -184,7 +184,7 @@ button, .btn {
   font-weight: 900;
   margin: 10px 0;
   border: none;
-  border-radius: 25%;
+  border-radius: 20px;
   color: var(--white);
   background: var(--dark-brown);
   cursor: pointer;
